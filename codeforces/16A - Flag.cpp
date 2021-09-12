@@ -15,12 +15,13 @@ int main()
             }
         }
         bool f=1;
+
         for(i=1;i<n;i++)
         {
             for(j=0;j<m;j++)
             {
                 if(s[i][j]==s[i-1][j])
-                {
+                {                      
                     f=0;
                     break;
                 }
@@ -28,7 +29,7 @@ int main()
         }
         for(i=0;i<n;i++)
         {
-            for(j=1;j<m;j++)
+            for(j=1;j<m;j++) //
             {
                 if(s[i][j]!=s[i][j-1])
                 {
