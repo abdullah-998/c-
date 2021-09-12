@@ -12,7 +12,7 @@ void A()
 }
 
 void B(void (*ptr)())
-{
+{ 
     ptr();
 }
 int main()
