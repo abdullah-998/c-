@@ -17,7 +17,7 @@ public:
             s[i]=s[n-1-i];
             s[n-i-1]=temp;
         }
-        cout<<"[";
+        cout<<"["; 
         int i=0;
         for(auto it:s)
         {
