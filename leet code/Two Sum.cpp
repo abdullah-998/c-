@@ -27,6 +27,6 @@ public:
 
 int main()
 {
-    BOOST;
+    BOOST; 
     
 }
