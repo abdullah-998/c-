@@ -33,6 +33,9 @@ pair<int,int> extended_gcd(int a,int b)
 // a*(b/gcd(a,b))
 int lcm(int a, int b) { return a * (b / gcd(a, b)); }
 
+////////////////////////////////////////////////////////
+// Linear Diophantine Equation
+bool isPossible(int a, int b, int c){ return (c%gcd(a,b) == 0); }
 int main()
 {
     int a,b;
