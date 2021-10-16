@@ -1,33 +1,43 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-// find ax+by = c
-// ax+by = g
-// g = gcd(a,b)
-
-int soln(int a,int b,int &x,int &y)
-{
-    if(b==0)
-    {
-        // a==gcd
-        x=1;
-        y=0;
-        return a;
-    }
-
-}
-
-
-int gcd(int a,int b) //O(log(b))
+////////////////////////////////////////////////
+// Finding GCD
+int gcd(int a,int b)
 {
     if(b==0)
         return a;
-    return gcd(b,a%b);
+    return gcd(b,a%b); /// gcd(a,b) = gcd(a-b,b) and gcd(a,0)==a
+    // a-floor(a/b)*b = a%b
 }
+
+/////////////////////////////////////////
+// ax+by = gcd(a,b)
+// ax+by = bx2+(a%b)y2
+// x=y2
+// y=x2-(a/b)*y2
+
+pair<int,int> extended_gcd(int a,int b)
+{
+    if(b==0)
+    return {1,1};
+
+    auto [x2,y2]= extended_gcd(b,a%b);
+
+    int x=y2,y=x2-(a/b)*y2;
+
+    return {x,y};
+
+}
+//////////////////////////////////////////////////////////
+// LCM = Least Common Multple
+// a*(b/gcd(a,b))
+int lcm(int a, int b) { return a * (b / gcd(a, b)); }
 
 int main()
 {
     int a,b;
     cin>>a>>b;
     cout<<gcd(a,b);
+
+    auto [x,y]=extended_gcd(a,b);
 }
