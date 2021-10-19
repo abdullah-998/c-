@@ -10,7 +10,6 @@ double multi(int mid,int n){
 }
 
 double getNthRoot(int n,int m){
-   ;
     double low = 1;
     double high = m;
     double eps = 1e-6; 
