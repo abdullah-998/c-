@@ -20,7 +20,7 @@ class Vector
         arr= new T[size];
         this->minsize=size;
     }
-    vector(int size,T iVal)
+    Vector(int size,T iVal)
     {
         arr= new T[size];
         this->minsize=size;
