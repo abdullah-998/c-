@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int n;
-    cout<,"Enter in Decimal"<<endl;
+    cout<<"Enter in Decimal"<<endl;
     cin>>n;
     stack<int> bin;
     
