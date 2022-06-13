@@ -10,6 +10,8 @@ void make_sieve()
     {
         sieve[i]=1;
     }
+    sieve[0]=0;
+    sieve[1]=0;
 
     for(int i=2;i*i<=N;i++)
     {
@@ -27,7 +29,7 @@ int main()
 {
     // making black_box
     make_sieve();
-    
+
     int t;
     cin>>t;
     while (t--)
@@ -38,6 +40,6 @@ int main()
         else cout<<"Not a Prime Number"<<endl;
     }
 
-    
+
 
 }
