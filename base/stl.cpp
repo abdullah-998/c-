@@ -1007,7 +1007,7 @@ int main() {
     sort(arr, arr+n, comp); 
     // greater<int> is an inbuilt comparator
     // which works only if you wanna do this in descending 
-    sort(arr, arr+n, greater<int>); 
+    sort(arr, arr+n, greater<int>()); 
  
  
  
